@@ -1,0 +1,19 @@
+pluginManagement {
+    plugins {
+        // version defined in settings.gradle to avoid version error when this sample is used in a multiproject build
+        id 'org.openjfx.javafxplugin' version "0.1.0"
+    }
+}
+
+rootProject.name = 'play-a-kml-tour'
+
+// download sample data
+def ant = new groovy.ant.AntBuilder()
+
+if (!file("./samples-data").exists()) {
+    file("./samples-data/kml").mkdirs()
+    ant.get(
+            src: "https://arcgisruntime.maps.arcgis.com/sharing/rest/content/items/f10b1d37fdd645c9bc9b189fb546307c/data",
+            dest: file("./samples-data/kml/Esri_tour.kmz")
+    )
+}

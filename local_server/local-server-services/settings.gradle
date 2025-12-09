@@ -1,0 +1,33 @@
+pluginManagement {
+    plugins {
+        // version defined in settings.gradle to avoid version error when this sample is used in a multiproject build
+        id 'org.openjfx.javafxplugin' version "0.1.0"
+    }
+}
+
+rootProject.name = 'local-server-services'
+
+// download sample data
+def ant = new groovy.ant.AntBuilder()
+
+if (!file("./samples-data").exists()) {
+    file("./samples-data/local_server").mkdirs()
+
+    ant.get(
+            src: "https://arcgisruntime.maps.arcgis.com/sharing/rest/content/items/85c34847bbe1402fa115a1b9b87561ce/data",
+            dest: file("./samples-data/local_server/RelationshipID.mpkx")
+    )
+
+
+    ant.get(
+            src: "https://arcgisruntime.maps.arcgis.com/sharing/rest/content/items/92ca5cdb3ff1461384bf80dc008e297b/data",
+            dest: file("./samples-data/local_server/PointsofInterest.mpkx")
+    )
+
+
+    ant.get(
+            src: "https://arcgisruntime.maps.arcgis.com/sharing/rest/content/items/a680362d6a7447e8afe2b1eb85fcde30/data",
+            dest: file("./samples-data/local_server/Contour.gpkx")
+    )
+    
+}

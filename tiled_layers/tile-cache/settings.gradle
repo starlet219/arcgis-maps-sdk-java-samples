@@ -1,0 +1,23 @@
+pluginManagement {
+    plugins {
+        // version defined in settings.gradle to avoid version error when this sample is used in a multi-project build
+        id 'org.openjfx.javafxplugin' version "0.1.0"
+    }
+}
+
+rootProject.name = 'tile-cache'
+
+// download sample data
+def ant = new groovy.ant.AntBuilder()
+
+if (!file("./samples-data").exists()) {
+    ant.get(
+            src: "https://arcgisruntime.maps.arcgis.com/sharing/rest/content/items/793a4620fbba443a931ac1fa52ad7f45/data",
+            dest: file("./data.zip")
+    )
+    ant.unzip(
+            src: file("./data.zip"),
+            dest: file("./samples-data/sanfrancisco")
+    )
+    delete file("./data.zip")
+}

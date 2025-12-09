@@ -1,0 +1,59 @@
+{
+    "category": "Display information",
+    "description": "A renderer allows you to change the style of all graphics in a graphics overlay by referencing a single symbol style. A renderer will only affect graphics that do not specify their own symbol style.",
+    "ignore": false,
+    "images": [
+        "AddGraphicsWithRenderer.png"
+    ],
+    "keywords": [
+        "arc",
+        "bezier",
+        "curve",
+        "display",
+        "ellipse",
+        "graphics",
+        "marker",
+        "overlay",
+        "renderer",
+        "segment",
+        "symbol",
+        "true curve",
+        "CubicBezierSegment",
+        "EllipticArcSegment",
+        "GeodesicEllipseParameters",
+        "Geometry",
+        "GeometryEngine",
+        "Graphic",
+        "GraphicsOverlay",
+        "Part",
+        "PolygonBuilder",
+        "PolylineBuilder",
+        "SimpleFillSymbol",
+        "SimpleLineSymbol",
+        "SimpleMarkerSymbol",
+        "SimpleRenderer"
+    ],
+    "redirect_from": [
+        "/java/latest/sample-code/add-graphics-with-renderer.htm"
+    ],
+    "relevant_apis": [
+        "CubicBezierSegment",
+        "EllipticArcSegment",
+        "GeodesicEllipseParameters",
+        "Geometry",
+        "GeometryEngine",
+        "Graphic",
+        "GraphicsOverlay",
+        "Part",
+        "PolygonBuilder",
+        "PolylineBuilder",
+        "SimpleFillSymbol",
+        "SimpleLineSymbol",
+        "SimpleMarkerSymbol",
+        "SimpleRenderer"
+    ],
+    "snippets": [
+        "src/main/java/com/esri/samples/add_graphics_with_renderer/AddGraphicsWithRendererSample.java"
+    ],
+    "title": "Add graphics with renderer"
+}

@@ -1,0 +1,19 @@
+pluginManagement {
+    plugins {
+        // version defined in settings.gradle to avoid version error when this sample is used in a multi-project build
+        id 'org.openjfx.javafxplugin' version "0.1.0"
+    }
+}
+
+rootProject.name = 'local-server-feature-layer'
+
+// download sample data
+def ant = new groovy.ant.AntBuilder()
+
+if (!file("./samples-data").exists()) {
+    file("./samples-data/local_server").mkdirs()
+    ant.get(
+            src: "https://arcgisruntime.maps.arcgis.com/sharing/rest/content/items/92ca5cdb3ff1461384bf80dc008e297b/data",
+            dest: file("./samples-data/local_server/PointsofInterest.mpkx")
+    )
+}

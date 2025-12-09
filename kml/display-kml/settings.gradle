@@ -1,0 +1,23 @@
+pluginManagement {
+    plugins {
+        // version defined in settings.gradle to avoid version error when this sample is used in a multi-project build
+        id 'org.openjfx.javafxplugin' version "0.1.0"
+    }
+}
+
+rootProject.name = 'display-kml'
+
+// download sample data
+def ant = new groovy.ant.AntBuilder()
+
+if (!file("./samples-data").exists()) {
+    ant.get(
+            src: "https://arcgisruntime.maps.arcgis.com/sharing/rest/content/items/7a6c8309562149348d0e72b724c9eb4e/data",
+            dest: file("./data.zip")
+    )
+    ant.unzip(
+            src: file("./data.zip"),
+            dest: file("./samples-data/kml")
+    )
+    delete file("./data.zip")
+}

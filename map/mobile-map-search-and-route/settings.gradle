@@ -1,0 +1,25 @@
+pluginManagement {
+    plugins {
+        // version defined in settings.gradle to avoid version error when this sample is used in a multi-project build
+        id 'org.openjfx.javafxplugin' version "0.1.0"
+    }
+}
+
+rootProject.name = 'mobile-map-search-and-route'
+
+// download sample data
+def ant = new groovy.ant.AntBuilder()
+
+if (!file("./samples-data").exists()) {
+    file("./samples-data/mmpk").mkdirs()
+
+    ant.get(
+            src: "https://arcgisruntime.maps.arcgis.com/sharing/rest/content/items/260eb6535c824209964cf281766ebe43/data",
+            dest: file("./samples-data/mmpk/SanFrancisco.mmpk")
+    )
+
+    ant.get(
+            src: "https://arcgisruntime.maps.arcgis.com/sharing/rest/content/items/e1f3a7254cb845b09450f54937c16061/data",
+            dest: file("./samples-data/mmpk/Yellowstone.mmpk")
+    )
+}

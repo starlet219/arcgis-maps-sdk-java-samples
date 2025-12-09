@@ -1,0 +1,32 @@
+{
+    "category": "Editing",
+    "description": "Delete features from an online feature service.",
+    "ignore": false,
+    "images": [
+        "DeleteFeatures.gif"
+    ],
+    "keywords": [
+        "deletion",
+        "feature",
+        "online",
+        "service",
+        "table",
+        "Feature",
+        "FeatureLayer",
+        "ServiceFeatureTable",
+        "ServiceGeodatabase"
+    ],
+    "redirect_from": [
+        "/java/latest/sample-code/delete-features.htm"
+    ],
+    "relevant_apis": [
+        "Feature",
+        "FeatureLayer",
+        "ServiceFeatureTable",
+        "ServiceGeodatabase"
+    ],
+    "snippets": [
+        "src/main/java/com/esri/samples/delete_features/DeleteFeaturesSample.java"
+    ],
+    "title": "Delete features"
+}

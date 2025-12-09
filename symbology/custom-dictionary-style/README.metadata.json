@@ -1,0 +1,34 @@
+{
+    "category": "Symbology",
+    "description": "Use a custom dictionary style created from a web style or local style file (.stylx) to symbolize features using a variety of attribute values.",
+    "ignore": false,
+    "images": [
+        "CustomDictionaryStyle.png"
+    ],
+    "keywords": [
+        "dictionary",
+        "military",
+        "portal",
+        "portal item",
+        "renderer",
+        "style",
+        "stylx",
+        "unique value",
+        "visualization",
+        "DictionaryRenderer",
+        "DictionarySymbolStyle",
+        "Portal",
+        "PortalItem"
+    ],
+    "redirect_from": "",
+    "relevant_apis": [
+        "DictionaryRenderer",
+        "DictionarySymbolStyle",
+        "Portal",
+        "PortalItem"
+    ],
+    "snippets": [
+        "src/main/java/com/esri/samples/custom_dictionary_style/CustomDictionaryStyleSample.java"
+    ],
+    "title": "Custom dictionary style"
+}

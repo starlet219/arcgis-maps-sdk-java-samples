@@ -1,0 +1,32 @@
+{
+    "category": "OGC",
+    "description": "Add OpenStreetMap as a basemap layer.",
+    "ignore": false,
+    "images": [
+        "OpenStreetMapLayer.png"
+    ],
+    "keywords": [
+        "basemap",
+        "layers",
+        "map",
+        "open",
+        "OpenStreetMap",
+        "OSM",
+        "street",
+        "ArcGISMap",
+        "MapView",
+        "OpenStreetMapLayer"
+    ],
+    "redirect_from": [
+        "/java/latest/sample-code/openstreetmap-layer.htm"
+    ],
+    "relevant_apis": [
+        "ArcGISMap",
+        "MapView",
+        "OpenStreetMapLayer"
+    ],
+    "snippets": [
+        "src/main/java/com/esri/samples/open_street_map_layer/OpenStreetMapLayerSample.java"
+    ],
+    "title": "OpenStreetMap layer"
+}
